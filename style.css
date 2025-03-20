@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+}
+.toolbar {
+    background-color: lightseagreen;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 200%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    min-height: 40px;
+    z-index: 1;
+    white-space: nowrap;
+    border-bottom: 10px solid white;
+    text-shadow: 1px 1px 1px gray;
+}
+.toolbar div {
+    flex: 1;
+    padding: 10px
+}
+.toolbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 0.2vw;
+    display: inline-block;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.toolbar a:hover {
+    background-color: gray;
+}
+.toolbar-left {
+    float: left;
+    display: flex;
+}
+.toolbar-right {
+    width:100%;
+    text-align: right;
+}
+.logo {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 5vh;
+    white-space: nowrap;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px grey;
+}
+.content {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+    font-size: 0.8vw;
+    color: white;
+}
+.content a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+.content h1 {
+    font-size: 2.5vw;
+}
+.content p {
+    margin-top: 10vh;
+    cursor: pointer;
+    background: white;
+    display: inline-block;
+    border: 2px solid hsl(0, 100%, 20%);
+    border-radius: 50px;
+    padding: 2vh;
+    color: hsl(0, 100%, 20%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.content p:hover {
+    background-color: hsl(0, 100%, 20%);
+    color: white;
+}
+.content div {
+    margin: 3vh;
+    padding: 10px;
+    width: 32vh;
+    height: 32vh;
+    min-width: 200px;
+    border-radius: 2vw;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-blend-mode: multiply;
+}
+#programming {
+    background-image: url('images/about/programming.jpg');
+    background-color: hsl(60, 20%, 50%);
+}
+#staff {
+    background-image: url('images/about/staff.jpg');
+    background-color: hsl(120, 20%, 50%);
+}
+#contact {
+    background-image: url('images/about/contact.jpg');
+    background-color: hsl(240, 20%, 50%);
+}
+
+.main-image {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    z-index: -1;
+    /*filter: brightness(0.75);*/
+}
+.main-image div {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.main-image-foreground img {
+    margin: 0 auto;
+
+    min-height: 90vh;
+    object-fit: cover;
+    overflow: hidden;
+    vertical-align: top;
+    display: grid;
+    place-items: center;  /* Centers both horizontally and vertically */
+    
+}
+.main-image-backdrop img {
+    filter: blur(20px) brightness(0.5);
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
+    max-height: 100vh;
+    object-fit: cover;
+}
+.foot {
+    text-align: center;
+    margin-top: 10vh;
+    color: white;
+    
+}
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    padding: 0 20vw;
+    margin-bottom: 10vh;
+}
+.about-section img {
+    max-width: 30vw;
+    max-height: 50vh;
+}
+.about-text {
+    font-size: 2em;
+    margin: 2vw;
+    color: white;
+    
+}
+.about-header {
+    font-size: 2em;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+.staff-content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20vh;
+    padding: 0 15vw;
+    justify-content: space-evenly;
+}
+.profile {
+    width: 15vw;
+    text-align: center;
+    color: white;
+}
+.profile img {
+    object-fit: cover;
+    overflow: hidden;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 1vw;
+
+}
+.profile h1 {
+    font-size: 2em;
+}
+.profile p {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    color: white;
+}
+.contact-content {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    padding: 0 15vw;
+    flex-direction: column;
+    width: fit-content;
+    
+}
+.contact{
+    text-align: left;
+    font-size: 2em;
+    border-radius: 10%;
+    display: inline-block;
+    color: lightgrey;
+    font-weight: bold;
+}
+.contact p {
+    display: inline-block;
+}
+.contact img {
+    width: 2vw;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.donate-venmo {
+    text-align: center;
+}
+.donate-venmo img {
+    max-height: 60vh;
+}
