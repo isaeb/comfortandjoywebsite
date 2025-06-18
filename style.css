@@ -5,26 +5,28 @@ body {
     background-color: darkslategray;
 }
 .toolbar {
-    background-color: lightseagreen;
-    overflow: hidden;
+    background-color: hsl(177, 40%, 41%);;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    font-size: 200%;
+    font-size: 1.5vw;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10vh;
-    min-height: 40px;
+    height: fit-content;
+    min-height: 70px;
+    max-height: fit-content;
     z-index: 1;
     white-space: nowrap;
-    border-bottom: 10px solid white;
+    border-bottom: 10px solid lightseagreen;
     text-shadow: 1px 1px 1px gray;
+    z-index: 100;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 .toolbar div {
     flex: 1;
-    padding: 10px
+    padding: 10px;
 }
 .toolbar a {
     color: white;
@@ -50,8 +52,8 @@ body {
     color: white;
     text-decoration: none;
     padding: 14px 20px;
-    font-size: 5vh;
     white-space: nowrap;
+    font-size: 200%;
     font-weight: bold;
     text-shadow: 1px 1px 1px grey;
 }
@@ -61,15 +63,14 @@ body {
     display: flex;
     justify-content: center;
     height: 35vh;
-    font-size: 0.8vw;
     color: white;
 }
 .content a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
+    color: inherit;
+    text-decoration: inherit;
 }
 .content h1 {
-    font-size: 2.5vw;
+    font-size: 6vh;
 }
 .content p {
     margin-top: 10vh;
@@ -81,6 +82,7 @@ body {
     padding: 2vh;
     color: hsl(0, 100%, 20%);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 2vh;
 }
 .content p:hover {
     background-color: hsl(0, 100%, 20%);
@@ -93,9 +95,9 @@ body {
     height: 32vh;
     min-width: 200px;
     border-radius: 2vw;
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-blend-mode: multiply;
 }
 #programming {
@@ -111,12 +113,22 @@ body {
     background-color: hsl(240, 20%, 50%);
 }
 
-.main-image {
+.main-content {
     position: relative;
     overflow: hidden;
     height: 100vh;
-    z-index: -1;
-    /*filter: brightness(0.75);*/
+}
+.main-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.main-image.active {
+    opacity: 1;
+    z-index: 2;
 }
 .main-image div {
     position: absolute;
@@ -127,7 +139,7 @@ body {
 .main-image-foreground img {
     margin: 0 auto;
 
-    min-height: 90vh;
+    min-height: 100vh;
     object-fit: cover;
     overflow: hidden;
     vertical-align: top;
@@ -144,10 +156,18 @@ body {
     object-fit: cover;
 }
 .foot {
+    color: lightgrey;
+}
+.short-foot {
     text-align: center;
     margin-top: 10vh;
-    color: white;
-    
+    margin: 0 40vw;
+}
+.long-foot {
+    text-align: center;
+    margin-top: 10vh;
+    margin: 0 30vw;
+    font-size: 75%;
 }
 .about-section {
     display: grid;
@@ -179,18 +199,18 @@ body {
     flex-wrap: wrap;
     margin-bottom: 20vh;
     padding: 0 15vw;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 .profile {
-    width: 15vw;
+    width: 300px;
     text-align: center;
     color: white;
 }
 .profile img {
     object-fit: cover;
     overflow: hidden;
-    width: 15vw;
-    height: 15vw;
+    width: 300px;
+    height: 300px;
     border-radius: 1vw;
 
 }
@@ -205,7 +225,16 @@ h2 {
     text-align: center;
     width: 100%;
     font-weight: bold;
-    margin-top: 20vh;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    color: white;
+}
+h3 {
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 12vh;
     margin-bottom: 5vh;
     color: white;
 }
@@ -225,12 +254,16 @@ h2 {
     display: inline-block;
     color: lightgrey;
     font-weight: bold;
+    text-decoration: none;
+    overflow: visible;
+    white-space: nowrap;
 }
 .contact p {
     display: inline-block;
 }
 .contact img {
     width: 2vw;
+    min-width: 50px;
     -webkit-filter: invert(1);
     filter: invert(1);
 }
@@ -239,4 +272,49 @@ h2 {
 }
 .donate-venmo img {
     max-height: 60vh;
+}
+.principles {
+    justify-content: space-between;
+    padding: 0 40vw;
+    margin-bottom: 2vh;
+    font-size: 2em;
+    color: white;
+}
+.infoButton {
+    
+    cursor: pointer;
+    background: white;
+    display: inline-block;
+    border: 2px solid hsl(0, 100%, 20%);
+    border-radius: 50px;
+    padding: 1vh;
+    color: hsl(0, 100%, 20%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 2vh;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.infoButton:hover {
+    background-color: hsl(0, 100%, 20%);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.fade-in.show {
+    opacity: 1;
+}
+.donors-list {
+    justify-content: space-between;
+    padding: 0 40vw;
+    margin-bottom: 2vh;
+    font-size: 2em;
+    color: white;
 }

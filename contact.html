@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Comfort & Joy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <div class="toolbar">
@@ -15,46 +17,60 @@
             <a href="contact.html">Contact</a>
         </div>
         <div class="logo">
-            Comfort and Joy
+            Comfort & Joy
         </div>
         <div class="toolbar-right">
             <a href="donate.html">Donate</a>
         </div>
         
     </div>
-    <h2>
+    <h2 class="fade-in">
         Contact Us
     </h2>
-    <div class="contact-content">
-        <div class="contact">
+    <div class="contact-content fade-in">
+        <a class="contact fade-in" href="https://www.facebook.com/comfortandjoywi" target="_blank">
+            <img src="images/icons/facebook.svg">
+            <p>
+                Facebook
+            </p>
+        </a>
+        <a class="contact" href="mailto:comfortandjoy2020@gmail.com" target="_blank">
             <img src="images/icons/envelope.svg">
             <p>
                 comfortandjoy2020@gmail.com
             </p>
-        </div>
-        <div class="contact">
+        </a>
+        <a class="contact fade-in" href="tel:6084447682" target="_blank">
             <img src="images/icons/phone.svg">
             <p>
                 (608) 444-7682
             </p>
-        </div>
+        </a>
     </div>
     
-    
     <div class="foot">
-        <h1>
-            Comfort and Joy
-        </h1>
-        <p>
-            © 2025, Comfort and Joy, Inc.
-        </p>
-        <p>
-            Oregon, WI
-        </p>
-        <p>
-            comfortandjoy2020@gmail.com
-        </p>
+        <div class="short-foot">
+            <p>
+                © 2025, Comfort & Joy, Inc.
+            </p>
+            <p>
+                Oregon, WI
+            </p>
+            <p>
+                comfortandjoy2020@gmail.com
+            </p>
+        </div>
         
+        <div class="long-foot">
+            <p>
+                Comfort & Joy is a 501(c)(3) not for profit organization based in Oregon, Wisconsin.
+            </p>
+            <p>
+                We provide creative short-term care, enrichment, and support opportunities for persons with special needs in order to help improve their quality of life and assist caregivers, allowing them time to recharge.
+            </p>
+        </div>
     </div>
 </body>
 </html>
+<script src="js/fadein.js"></script>
+<script src="js/padfoot.js"></script>

@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Comfort & Joy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <div class="toolbar">
         <div class="toolbar-left">
-            <a href="index.html">Home</a>
-            <a href="about.html">Programming</a>
-            <a href="staff.html">Staff</a>
-            <a href="contact.html">Contact</a>
+            <a class="toolbar-scale" href="index.html">Home</a>
+            <a class="toolbar-scale" href="about.html">Programming</a>
+            <a class="toolbar-scale" href="staff.html">Staff</a>
+            <a class="toolbar-scale" href="contact.html">Contact</a>
         </div>
         <div class="logo">
-            Comfort and Joy
+            Comfort & Joy
         </div>
         <div class="toolbar-right">
-            <a href="donate.html">Donate</a>
+            <a class="toolbar-scale" href="donate.html">Donate</a>
         </div>
         
     </div>
-    <div class="main-image">
-        <div class="main-image-backdrop">
-            <img src="images/main/image1.jpg">
+    <div class="main-content fade-in">
+        <div class="main-image active">
+            <div class="main-image-backdrop">
+                <img src="images/main/image1.jpg">
+            </div>
+            <div class="main-image-foreground">
+                <img src="images/main/image1.jpg">
+            </div>
         </div>
-        <div class="main-image-foreground">
-            <img src="images/main/image1.jpg">
+        <div class="main-image">
+            <div class="main-image-backdrop">
+                <img src="images/main/image2.jpg">
+            </div>
+            <div class="main-image-foreground">
+                <img src="images/main/image2.jpg">
+            </div>
+        </div>
+        <div class="main-image">
+            <div class="main-image-backdrop">
+                <img src="images/main/image3.jpg">
+            </div>
+            <div class="main-image-foreground">
+                <img src="images/main/image3.jpg">
+            </div>
+        </div>
+        <div class="main-image">
+            <div class="main-image-backdrop">
+                <img src="images/main/image4.jpg">
+            </div>
+            <div class="main-image-foreground">
+                <img src="images/main/image4.jpg">
+            </div>
+        </div>
+        <div class="main-image">
+            <div class="main-image-backdrop">
+                <img src="images/main/image5.jpg">
+            </div>
+            <div class="main-image-foreground">
+                <img src="images/main/image5.jpg">
+            </div>
         </div>
     </div>
     
-    
-    <div class="content">
+    <div class="content fade-in">
         <div id="programming">
             <h1>
                 ABOUT
@@ -47,33 +83,47 @@
             <h1>
                 STAFF
             </h1>
-            <p>
-                Meet our staff
-            </p>
+            <a href="staff.html">
+                <p>
+                    Meet our staff
+                </p>
+            </a>
         </div>
         <div id="contact">
             <h1>
                 CONTACT
             </h1>
-            <p>
-                Contact us
-            </p>
+            <a href="contact.html">
+                <p>
+                    Contact us
+                </p>
+            </a>
         </div>
     </div>
     <div class="foot">
-        <h1>
-            Comfort and Joy
-        </h1>
-        <p>
-            © 2025, Comfort and Joy, Inc.
-        </p>
-        <p>
-            Oregon, WI
-        </p>
-        <p>
-            comfortandjoy2020@gmail.com
-        </p>
+        <div class="short-foot">
+            <p>
+                © 2025, Comfort & Joy, Inc.
+            </p>
+            <p>
+                Oregon, WI
+            </p>
+            <p>
+                comfortandjoy2020@gmail.com
+            </p>
+        </div>
         
+        <div class="long-foot">
+            <p>
+                Comfort & Joy is a 501(c)(3) not for profit organization based in Oregon, Wisconsin.
+            </p>
+            <p>
+                We provide creative short-term care, enrichment, and support opportunities for persons with special needs in order to help improve their quality of life and assist caregivers, allowing them time to recharge.
+            </p>
+        </div>
     </div>
 </body>
 </html>
+<script src="js/fadein.js"></script>
+<script src="js/padfoot.js"></script>
+<script src="js/slideshow.js"></script>

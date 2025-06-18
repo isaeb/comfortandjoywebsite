@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Comfort & Joy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <div class="toolbar">
@@ -15,34 +17,75 @@
             <a href="contact.html">Contact</a>
         </div>
         <div class="logo">
-            Comfort and Joy
+            Comfort & Joy
         </div>
         <div class="toolbar-right">
             <a href="donate.html">Donate</a>
         </div>
         
     </div>
-    <h2>
+    <h2 class="fade-in">
         Make a Donation
     </h2>
-    <div class="donate-venmo">
+    <div class="donate-venmo fade-in">
         <img src="images/donate/donate-venmo.jpg">
     </div>
+    <h3 class="fade-in">
+        Our Key Principles
+    </h3>
+    <ol class="principles">
+        <li class="fade-in">
+            <p style="font-weight: bold;">Transparency      </p>
+            <p>We maintain open communication about how funds are allocated and the outcomes achieved.</p>
+        </li>
+        <li class="fade-in">
+            <p style="font-weight: bold;">Prioritization    </p>
+            <p>We assess the needs of our families first and direct funds to areas where they can make the most difference.</p>
+        </li>
+        <li class="fade-in">
+            <p style="font-weight: bold;">Impact Assessment </p>
+            <p>We regularly evaluate the effectiveness of our spending to ensure that we are achieving our goals and making the best use of donor contributions.</p>
+        </li>
+    </ol>
+    <!-- Donors List Section -->
+    <h3>Our Amazing Donors</h3>
+    <div class="donors-list">
+        <ul class="donors">
+            <li>Anonymous - $100</li>
+            <li>Jane Smith - $50</li>
+            <li>Mark Taylor - $12</li>
+            <!-- Add more donor names as needed -->
+        </ul>
+    </div>
+    <a class="infoButton fade-in" href="about.html">
+        <p>
+            Learn more about how we use donations
+        </p>
+    </a>
     
     <div class="foot">
-        <h1>
-            Comfort and Joy
-        </h1>
-        <p>
-            © 2025, Comfort and Joy, Inc.
-        </p>
-        <p>
-            Oregon, WI
-        </p>
-        <p>
-            comfortandjoy2020@gmail.com
-        </p>
+        <div class="short-foot">
+            <p>
+                © 2025, Comfort & Joy, Inc.
+            </p>
+            <p>
+                Oregon, WI
+            </p>
+            <p>
+                comfortandjoy2020@gmail.com
+            </p>
+        </div>
         
+        <div class="long-foot">
+            <p>
+                Comfort & Joy is a 501(c)(3) not for profit organization based in Oregon, Wisconsin.
+            </p>
+            <p>
+                We provide creative short-term care, enrichment, and support opportunities for persons with special needs in order to help improve their quality of life and assist caregivers, allowing them time to recharge.
+            </p>
+        </div>
     </div>
 </body>
 </html>
+<script src="js/fadein.js"></script>
+<script src="js/padfoot.js"></script>
