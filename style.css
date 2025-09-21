@@ -144,7 +144,7 @@ body {
     overflow: hidden;
     vertical-align: top;
     display: grid;
-    place-items: center;  /* Centers both horizontally and vertically */
+    place-items: center;
     
 }
 .main-image-backdrop img {
@@ -308,10 +308,10 @@ h3 {
 .about-section {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Makes both columns the same height */
+    align-items: stretch;
     padding: 0 20vw;
     margin-bottom: 10vh;
-    gap: 2vw; /* Optional spacing between image and text */
+    gap: 2vw;
 }
 .about-section img {
     max-width: 30vw;
@@ -326,6 +326,60 @@ h3 {
     color: lightgrey;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Optional: vertically center text inside */
+    justify-content: center;
     max-height: 50vh;
+}
+
+/* Hide hamburger on desktop, show toolbar */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60px;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+    margin: 15px;
+    margin-left: auto;
+}
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Mobile menu (hidden by default) */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: hsl(177, 40%, 41%);
+    position: fixed;
+    top: 70px; /* below toolbar height */
+    left: 0;
+    right: 0;
+    z-index: 150;
+    border-top: 5px solid lightseagreen;
+}
+.mobile-menu a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.mobile-menu a:hover {
+    background-color: gray;
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+    .toolbar {
+        display: none; /* hide desktop toolbar */
+    }
+    .hamburger {
+        display: flex; /* show hamburger */
+    }
 }
